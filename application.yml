@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      database: service-db
+      uri: mongodb://localhost:27017/service-db
+      repositories:
+        type: auto
+      username: liyevgen
+      password: secret
+logging:
+  level:
+    org.springframework.data: debug
+logging.level.: error
