@@ -1,4 +1,8 @@
 spring:
+  profiles:
+    active: default
+  application:
+    name: blog
   data:
     mongodb:
       database: service-db
@@ -7,7 +11,20 @@ spring:
         type: auto
       username: liyevgen
       password: secret
+
 logging:
   level:
     org.springframework.data: debug
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO
 logging.level.: error
+  
+server:
+  port: 2703
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+     default-zone: http://localhost:8761/eureka
